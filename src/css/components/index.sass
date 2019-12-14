@@ -1,0 +1,182 @@
+.content
+  background-color: coral
+  width: 100vw
+  height: 100vh
+
+  // NAVBAR
+.my-navbar
+  width: 100vw
+  background-color: black
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 10rem
+  border: solid 0.5px white
+
+.hamburger
+  width: 30px
+  height: 30px
+  background-color: rgb(146, 33, 33)
+  display: none
+  align-items: center
+  justify-content: space-evenly
+  flex-direction: column
+  div
+      position: relative
+      flex: none
+      width: 17px
+      height: 1px
+      background-color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: all 0.8s ease
+
+.hamburger-active
+  justify-content: center
+
+  div
+    &:first-of-type
+      transform: rotate(225deg)
+
+    &:last-of-type
+      transform: rotate(-225deg)
+
+.logo-link
+  width: 17.8rem
+  height: 6rem
+  // margin: 2rem 0
+  transition: width 0.4s ease
+
+.logo
+    width: inherit
+
+.nv-collapse
+  display: flex
+  align-items: center
+
+.nv-list
+  margin: 0
+  display: flex
+  align-items: center
+  flex-wrap: nowrap
+  transition: width 0.4s ease
+
+.nv-link
+  text-decoration: none
+  padding: 0 1.7rem
+  font: 400 15px Montserrat
+  color: white!important
+  transition: all 0.4s ease
+
+  &:hover
+    font-weight: 700
+
+/* SEARCH
+
+.search
+  display: flex
+  align-items: center
+  background-color: #1A12BB
+
+.search-form
+  display: flex
+  align-items: center
+
+.search-btn
+    font-size: 17px
+    margin: 0
+    // padding: 0 4px
+    color: white
+    cursor: pointer
+    .search-icon
+      padding: 2px 10px
+    .shield
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      display: none
+
+
+
+.search-input
+  border: 0
+  outline: 0
+  margin: 0 1.4rem
+  font: 400 18px Muli
+  color: white
+  background-color: black
+  width: 0
+  transition: width 0.4s ease
+
+.times-icon
+  color: white
+  font-size: 15px
+  padding: 0 10px
+  cursor: pointer
+  display: none
+
+.search-active
+    .logo-link
+        width: 0
+        opacity: 0
+    .nv-collapse
+        .nv-list
+            width: 0
+            opacity: 0
+            z-index: -1
+        .search
+            .search-btn
+                // margin-top: 0
+                cursor: default
+            .search-form
+                .search-input
+                    width: 83rem
+                .times-icon
+                    display: block
+                    
+.toggle-nav 
+  display: flex!important
+  flex-direction: column!important
+  position: absolute
+  width: 100vw
+  top: 8.5rem
+  left: 0
+  right: 0
+  padding: 0 4rem
+  background-color: black
+  .nv-list
+    flex-direction: column
+    height: auto
+    width: 100%
+    .nv-item
+      height: auto
+      width: 100%
+      // padding: 0 4rem
+      .nv-link
+        border-bottom: solid 0.4px white
+        padding: 0.5rem 0
+  .search
+    width: 100%
+    margin-top: 1.5rem
+    display: flex
+    order: -1
+    .search-btn
+      .shield
+        display: block
+    .search-form
+      width: 100%
+      .search-input
+        width: 100%
+        margin: 0
+        padding: 0 10px
+        border-radius: 10px
+
+@media (max-width: 768px)
+  .hamburger
+    display: flex
+
+  .nv-collapse
+    display: none
+  
