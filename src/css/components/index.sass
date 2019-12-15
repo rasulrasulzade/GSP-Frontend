@@ -1,5 +1,5 @@
 .content
-  background-color: coral
+  // background-color: coral
   width: 100vw
   height: 100vh
 
@@ -16,7 +16,7 @@
 .hamburger
   width: 30px
   height: 30px
-  background-color: rgb(146, 33, 33)
+  // background-color: rgb(146, 33, 33)
   display: none
   align-items: center
   justify-content: space-evenly
@@ -76,7 +76,7 @@
 .search
   display: flex
   align-items: center
-  background-color: #1A12BB
+  // background-color: #1A12BB
 
 .search-form
   display: flex
@@ -145,6 +145,7 @@
   right: 0
   padding: 0 4rem
   background-color: black
+  z-index: 900
   .nv-list
     flex-direction: column
     height: auto
@@ -179,9 +180,12 @@
 
 //Carousel
 .slide-dots
+  width: 63px
   height: 30px
-  top: 30%
+  top: 33%
   margin-top: 1rem
+  margin-left: auto!important
+  margin-right: auto!important
 
 .slide-dot
   width: 15px!important
@@ -194,6 +198,36 @@
   top: 20%
   left: 4%
   right: 4%
+  z-index: 0!important
+
+.blatt-wrapper
+  bottom: 8.2rem
+
+.blatt
+  width: 19rem
+  height: 20.6rem
+  margin: 0 1rem
+  border-radius: 6px
+  -webkit-backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px)
+  background-color: rgba(255, 255, 255, 0.5) 
+  display: flex
+  justify-content: center
+  flex-direction: column
+  &:hover
+    background-color: white
+    .blatt-header
+      color: #475DA6
+  .blatt-img
+    width: 55px
+    height: 55px
+    margin: 3.5rem auto 2.1rem auto
+  .blatt-header
+    margin: 0 auto
+    padding: 0 4rem
+    font: 400 19px Muli,sans-serif
+    color: white
+
 @media (max-width: 768px)
   .hamburger
     display: flex
