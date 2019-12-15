@@ -2,35 +2,51 @@ extends pug_template/head
 
 block unique-content
     .content
-        div
-            nav.px-4.my-navbar
-                .hamburger
-                    div
-                    div
-                a(href='').logo-link                 
-                    img.logo.h-100(src='img/gsplogowhite.svg')
-                .nv-collapse.h-100
-                    ul.nv-list.h-100
-                        li.nv-item.h-100
-                            a.nv-link.h-100.d-flex.align-items-center(href='#')
-                                span.oneLineText Haqqımızda
-                        li.nv-item.h-100
-                            a.nv-link.h-100.d-flex.align-items-center(href='#')
-                                span.oneLineText Xidmətlər
-                        li.nv-item.h-100
-                            a.nv-link.h-100.d-flex.align-items-center(href='#')
-                                span.oneLineText Həllər
-                        li.nv-item.h-100
-                            a.nv-link.h-100.d-flex.align-items-center(href='#')
-                                span.oneLineText Layihələrimiz
-                        li.nv-item.h-100
-                            a.nv-link.h-100.d-flex.align-items-center(href='#')
-                                span.oneLineText Əlaqə
-                    .search
-                        label.search-btn.position-relative(for='search-input')
-                            i.fa.fa-search.search-icon
-                            .shield.position-absolute
-                        form.search-form
-                            input#search-input.search-input(type='text', name='search-input', placeholder='Axtarış edin')
-                            .times-icon 
-                                i.fa.fa-times
+        nav.px-4.my-navbar
+            .hamburger
+                div
+                div
+            a(href='').logo-link                 
+                img.logo.h-100(src='img/gsplogowhite.svg')
+            .nv-collapse.h-100
+                ul.nv-list.h-100
+                    li.nv-item.h-100
+                        a.nv-link.h-100.d-flex.align-items-center(href='#')
+                            span.oneLineText Haqqımızda
+                    li.nv-item.h-100
+                        a.nv-link.h-100.d-flex.align-items-center(href='#')
+                            span.oneLineText Xidmətlər
+                    li.nv-item.h-100
+                        a.nv-link.h-100.d-flex.align-items-center(href='#')
+                            span.oneLineText Həllər
+                    li.nv-item.h-100
+                        a.nv-link.h-100.d-flex.align-items-center(href='#')
+                            span.oneLineText Layihələrimiz
+                    li.nv-item.h-100
+                        a.nv-link.h-100.d-flex.align-items-center(href='#')
+                            span.oneLineText Əlaqə
+                .search
+                    label.search-btn.position-relative(for='search-input')
+                        i.fa.fa-search.search-icon
+                        .shield.position-absolute
+                    form.search-form
+                        input#search-input.search-input(type='text', name='search-input', placeholder='Axtarış edin')
+                        .times-icon 
+                            i.fa.fa-times
+        main.main
+            .my-carousel.h-100
+                #carouselExampleIndicators.carousel.slide.h-100(data-ride='')
+                    ol.carousel-indicators.slide-dots
+                        li.slide-dot.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                        li.slide-dot(data-target='#carouselExampleIndicators', data-slide-to='1')
+                        li.slide-dot(data-target='#carouselExampleIndicators', data-slide-to='2')
+                    .carousel-inner.w-100.h-100
+                        .carousel-item.h-100.active
+                            img.d-block.w-100.h-100(src='img/nasa-unsplash.svg', alt='First slide')
+                            .carousel-caption.d-none.d-md-block.slide-caption
+                                h1
+                                    | Keyfiyyətli Xidmət Yalnız Bizimlə! 
+                        .carousel-item.h-100
+                            img.d-block.w-100.h-100(src='img/nasa-unsplash.svg', alt='Second slide')
+                        .carousel-item.h-100
+                            img.d-block.w-100.h-100(src='img/nasa-unsplash.svg', alt='Third slide')
