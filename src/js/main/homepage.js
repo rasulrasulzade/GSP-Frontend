@@ -2,6 +2,7 @@ const ableSearch = () => {
     $('.search-icon').click(function(){
         $('.my-navbar').addClass('justify-content-center');
         $('.my-navbar').addClass('search-active'); 
+        $('main').addClass('main-blur');
     })
 }
 
@@ -9,6 +10,7 @@ const disableSearch = () => {
     $('.times-icon').click(function(){
         $('.my-navbar').removeClass('justify-content-center');
         $('.my-navbar').removeClass('search-active');
+        $('main').removeClass('main-blur');
     })  
 
     $(document).click(function(e) {
@@ -17,6 +19,7 @@ const disableSearch = () => {
         if(!_this.closest('.search').length && !_this.hasClass('search')) {
             $('.my-navbar').removeClass('justify-content-center');
             $('.my-navbar').removeClass('search-active');
+            $('main').removeClass('main-blur');
         }
     });
 }
