@@ -1,5 +1,4 @@
 .content
-  // background-color: coral
   width: 100vw
   height: 100vh
 
@@ -8,7 +7,6 @@
   height: calc(100% - 10rem)
 
 .my-carousel
-  // background-image: url('../../img/nasa-unsplash.svg')
   height: 100%
   background-repeat: no-repeat
   background-position: center
@@ -46,16 +44,15 @@
   margin-right: auto
 
 .blatt-link
+  position: relative
   margin: 0 1rem 2.5rem 1rem
   &:hover
-    .blatt
+    .blatt-content
       background-color: white
       transform: rotateY(180deg)
       .blatt__embd
-        // visibility: visible
         opacity: 1
       .blatt__img-box
-        // background-image: url('../../img/blatt 1 blue.svg')
         transform: rotateY(180deg)
       .blatt-header
         color: #475DA6
@@ -63,32 +60,32 @@
 
 .blatt-link:first-of-type
   &:hover
-    .blatt
+    .blatt-content
       .blatt__img-box
         background-image: url('../../img/blatt 1 blue.svg')
 .blatt-link:nth-of-type(2)
   &:hover
-    .blatt
+    .blatt-content
       .blatt__img-box
         background-image: url('../../img/blatt 2 blue.svg')
 .blatt-link:nth-of-type(3)
   &:hover
-    .blatt
+    .blatt-content
       .blatt__img-box
         background-image: url('../../img/blatt 3 blue.svg')
 .blatt-link:nth-of-type(4)
   &:hover
-    .blatt
+    .blatt-content
       .blatt__img-box
         background-image: url('../../img/blatt 4 blue.svg')
 .blatt-link:nth-of-type(5)
   &:hover
-    .blatt
+    .blatt-content
       .blatt__img-box
         background-image: url('../../img/blatt 5 blue.svg')
 .blatt-link:last-of-type
   &:hover
-    .blatt
+    .blatt-content
       .blatt__img-box
         background-image: url('../../img/blatt 6 blue.svg')
 
@@ -96,15 +93,23 @@
 .blatt
   width: 19rem
   height: 20.6rem
-  // margin: 0 1rem
   border-radius: 6px
-  -webkit-backdrop-filter: blur(9px)
-  backdrop-filter: blur(9px)
-  // backdrop-filter: brightness(10%)!important
   background-color: rgba(255, 255, 255, 0.07) 
+  filter: blur(9px)  
+  filter: brightness(5)
   display: flex
   justify-content: center
   flex-direction: column
+  transition: all 0.4s ease
+
+.blatt-content
+  background-color: transparent
+  border-radius: 6px
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
   transition: all 0.4s ease
  
 .blatt__embd
@@ -119,7 +124,6 @@
   background-size: cover
   transform: rotateY(180deg)
   z-index: -1
-  // visibility: hidden
   opacity: 0
   transition: all 0.4s ease
 
@@ -129,35 +133,34 @@
   background-size: cover
   width: 55px
   height: 55px
-  margin: 3.5rem auto 2.1rem auto    
-  z-index: -1   
+  margin: 3.5rem auto 2.1rem auto     
 
 .blatt-link:first-of-type
-  .blatt
+  .blatt-content
     .blatt__img-box
       background-image: url('../../img/blatt 1 white.svg')
 .blatt-link:nth-of-type(2)
-  .blatt
+  .blatt-content
     .blatt__img-box
       background-image: url('../../img/blatt 2 white.svg')
 .blatt-link:nth-of-type(3)
-  .blatt
+  .blatt-content
     .blatt__img-box
       background-image: url('../../img/blatt 3 white.svg')
       width: 33px
       height: 58px
 .blatt-link:nth-of-type(4)
-  .blatt
+  .blatt-content
     .blatt__img-box
       background-image: url('../../img/blatt 4 white.svg')
       width: 35px
       height: 55px
 .blatt-link:nth-of-type(5)
-  .blatt
+  .blatt-content
     .blatt__img-box
       background-image: url('../../img/blatt 5 white.svg')
 .blatt-link:last-of-type
-  .blatt
+  .blatt-content
     .blatt__img-box
       background-image: url('../../img/blatt 6 white.svg')
 
@@ -166,13 +169,16 @@
   padding: 0 2rem
   font: 400 19px Muli,sans-serif
   color: white
-  z-index: -1
 
 @media (max-width: 1260px)
   .blatt-wrapper
-    width: 63rem
+    width: 82rem
   .blatt-link
     pointer-events: none
+@media ( max-width:  991px)
+  .blatt
+    width: 25rem
+  
 @media (min-width: 991px) and (max-width: 1260px)
   .slide-dots
     top: 25%
